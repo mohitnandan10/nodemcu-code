@@ -318,3 +318,16 @@ void handel_UserAction(){
 	}
 	server.send(200, "text/json", getDataJson());
 }
+ client.println("Content-Type: text/html");
+  client.println("");
+  client.println("<!DOCTYPE HTML>");
+  client.println("<html>");
+  client.println("<h1>Welcome to the Webpage!</h1>");
+  client.println("<h3>LED Controls<h3>");
+  client.println("<br>");
+  client.println("<a href=\"/led1on\"\"><button>LED 1 ON</button></a>");
+  client.println("<a href=\"/led1off\"\"><button>LED 1 OFF</button></a><br/>");
+  client.println("<a href=\"/led2on\"\"><button>LED 2 ON</button></a>");
+  client.println("<a href=\"/led2off\"\"><button>LED 2 OFF</button></a><br/>");
+  client.println("</html>");
+}
